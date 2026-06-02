@@ -9,6 +9,7 @@ config:
     padding: 25
     spacing.nodeNode: 50         # ↑ increase node spacing
     spacing.nodeNodeBetweenLayers: 50
+    algorithm: layered
   themeVariables:
     primaryTextColor: "#322c2c"       # arrow labels
     textColor: "#312709"              # node text
