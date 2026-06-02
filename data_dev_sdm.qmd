@@ -131,7 +131,7 @@ Detailed elaboration of the 'main steps'. Should enable full reproduction of the
 #| message: false
 
 # list, load R packages
-renv::activate()
+# renv::activate()
 pkgs <- c("ekznwr", "ENMeval", "kableExtra", "leaflet",
   "readxl", "renv", "sf", "terra", "usdm"
 )
@@ -287,7 +287,7 @@ swi, bioclim vars
 ```{r}
 swi_fp <- dta_find(datad, "swi_s12_lo31.tif")
 names(swi_fp) <- "swi"
-bioc_fp <- dta_find(datad, "za-crop", dir_filter = "outputs")
+bioc_fp <- dta_find(datad, "za-crop", dir_filter = "chelsa")
 names(bioc_fp) <- paste0("bioclim_", 1:19)
 # get dem file path in zip archive
 dem_arc <- dta_arc_extr( # extracts the tif from the ekznwr archive

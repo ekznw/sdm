@@ -1,5 +1,6 @@
 # Species distribution modelling repository for KwaZulu-Natal
 
+Work flow overview.
 ``` mermaid
 
 ---
@@ -23,19 +24,15 @@ flowchart TD
     SpeciesRecordDB[(Species Record<br/>Database)] -->|Pull species<br/>occurrence data| DataInput[Species<br/>Occurrence Data]
     DataInput --> DecisionPoint{Decision:<br/>Analysis Type}
     
-    DecisionPoint -->|Option 1:<br/>Simple intersection| PointIntersection[Point Intersection<br/>with Planning Units]
-    DecisionPoint -->|Option 2:<br/>Environmental<br/>overlay| EnvOverlay[Environmental<br/>Overlay Analysis]
-    DecisionPoint -->|Option 3:<br/>Full<br/>modelling| SDMAnalysis[Species Distribution<br/>Model Analysis]
+    DecisionPoint -->|Simple intersection| PointIntersection[Point Intersection<br/>with Planning Units]
+    DecisionPoint -->|Environmental<br/>overlay| EnvOverlay[Environmental<br/>Overlay Analysis]
+    DecisionPoint -->|Full SDM<br/>modelling| SDMAnalysis[Species Distribution<br/>Model Analysis]
     
     SpeciesRecordDB -->|Query species<br/>traits & groups| SpeciesTraits[Species Traits<br/>& Group Data]
     SpeciesTraits --> EnvDataQuery[Query Environmental<br/>Data by Species<br/>Traits/Groups]
     
     EnvDataDB[(Environmental Data<br/>Database)] -->|Fetch layers:<br/>climate, soil,<br/>vegetation| EnvDataQuery
 
-    %%EnvDataQuery --> envDecisionPoint{Environmental<br/>variable}
-
-    %%envDecisionPoint --> SDMAnalysis
-    %%envDecisionPoint --> EnvOverlay
     EnvDataQuery --> SDMAnalysis
     EnvDataQuery --> EnvOverlay
     
