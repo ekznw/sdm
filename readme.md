@@ -9,9 +9,11 @@ config:
     nodePlacement.strategy: SIMPLE
     spacing.nodeNode: 30
   themeVariables:
-    primaryTextColor: "#ffffff"
-    textColor: "#ffffff"
-    labelTextColor: "#ffffff"
+    primaryTextColor: "#322c2c"       # arrow labels
+    textColor: "#312709"              # node text
+    labelTextColor: "#151319"         # node labels
+    lineColor: "#443212"              # arrow color
+    edgeLabelBackground: "#e2c888bf"  # link bg color
 ---
 flowchart TD
     SpeciesRecordDB[(Species Record<br/>Database)] -->|Pull species<br/>occurrence data| DataInput[Species<br/>Occurrence Data]
@@ -35,10 +37,10 @@ flowchart TD
     
     Output --> PlanningUnits[Planning Units<br/>Layer]
     
-    classDef database fill:#eef2ff,stroke:#818cf8
-    classDef process fill:#f0fdf4,stroke:#4ade80
-    classDef decision fill:#fff7ed,stroke:#fb923c
-    classDef output fill:#fdf4ff,stroke:#e879f9
+    classDef database fill:#618571,stroke:#9da19f
+    classDef process fill:#dda381,stroke:#909592
+    classDef decision fill:#fde68a,stroke:#fb923c
+    classDef output fill:#618571,stroke:#9da19f
     
     class SpeciesRecordDB,EnvDataDB database
     class DataInput,SpeciesTraits,EnvDataQuery,PointIntersection,EnvOverlay,SDMAnalysis process
