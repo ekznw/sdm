@@ -284,6 +284,10 @@ Make a table of available predictors.
 
 swi, bioclim vars
 
+```{mermaid}
+
+```
+
 ```{r}
 swi_fp <- dta_find(datad, "swi_s12_lo31.tif")
 names(swi_fp) <- "swi"
