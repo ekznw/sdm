@@ -5,14 +5,15 @@
 config:
   layout: elk
   elk:
-    padding: 25
     nodePlacement.strategy: SIMPLE
-    spacing.nodeNode: 30
+    padding: 25
+    spacing.nodeNode: 50         # ↑ increase node spacing
+    spacing.nodeNodeBetweenLayers: 50
   themeVariables:
     primaryTextColor: "#322c2c"       # arrow labels
     textColor: "#312709"              # node text
     labelTextColor: "#151319"         # node labels
-    lineColor: "#443212"              # arrow color
+    lineColor: "#e69d1e"              # arrow color
     edgeLabelBackground: "#e2c888bf"  # link bg color
 ---
 flowchart TD
