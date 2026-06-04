@@ -1,5 +1,16 @@
-# Species distribution modelling repository for KwaZulu-Natal  
-## Test no.3
+---
+title: readme
+title-block-banner: true
+format: 
+    html:
+        embed-resources: true
+        smooth-scroll: true
+        theme:
+            - /home/paulg/.ekznw_quarto/style/_ekznw_theme.
+css: /home/paulg/.ekznw_quarto/style/default_overrides.css
+---
+
+# Species distribution modelling repository for KwaZulu-Natal
 
 Work flow overview.
 
