@@ -9,19 +9,18 @@ Work flow overview.
 config:
   layout: elk
   elk:
+    algorithm: layered
     nodePlacement.strategy: SIMPLE
     padding: 25
-    spacing.nodeNode: 50         # ↑ increase node spacing
-    spacing.nodeNodeBetweenLayers: 50
-    algorithm: layered
+    spacing.nodeNode: 60
+    spacing.nodeNodeBetweenLayers: 80
   themeVariables:
-    primaryTextColor: "#322c2c"       # arrow labels
-    textColor: "#312709"              # node text
-    labelTextColor: "#151319"         # node labels
-    lineColor: "#e69d1e"              # arrow color
-    edgeLabelBackground: "#e2c888bf"  # link bg color
+    primaryTextColor: "#322c2c"
+    textColor: "#312709"
+    labelTextColor: "#151319"
+    lineColor: "#e69d1e"
+    edgeLabelBackground: "#e2c888bf"
 ---
-
 flowchart TD
     SpeciesRecordDB[(Species Record<br/>Database)] -->|Pull species<br/>occurrence data| DataInput[Species<br/>Occurrence Data]
     DataInput --> DecisionPoint{Decision:<br/>Analysis Type}
@@ -48,13 +47,13 @@ flowchart TD
     classDef process fill:#dda381,stroke:#909592
     classDef decision fill:#fde68a,stroke:#fb923c
     classDef output fill:#618571,stroke:#9da19f
-    classDef envdecision fill:#fde68a,stroke:#fb923c
+    classDef spacer fill:none,stroke:none
     
     class SpeciesRecordDB,EnvDataDB database
     class DataInput,SpeciesTraits,EnvDataQuery,PointIntersection,EnvOverlay,SDMAnalysis process
     class DecisionPoint decision
-    class envDecisionPoint envdecision
     class Output,PlanningUnits output
+    class EnvSpacer spacer
 ```
 
 option a:
