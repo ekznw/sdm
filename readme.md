@@ -3,7 +3,7 @@
 
 Work flow overview.
 
-```{mermaid}
+``` mermaid
 
 ---
 config:
